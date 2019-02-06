@@ -56,16 +56,64 @@ p {
 #Detail {background-color: #17202A;}
 #Episode {background-color: #17202A;}
 #Download {background-color: #17202A;}
-#Komentar {background-color: white;}
-  
+.accordion {
+  background-color: #17202A;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  width: 100%;
+  border: 1px #566573;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #566573; 
+}
+
+.panel {
+  padding: 0;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #566573;
+  padding: 8px;
+  width: 50%;
+  background-color: #17202A;
+  color: white;
+  text-align: center;
+}
+
+#customers td:hover {background-color: #566573;}
+
+#customers th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#customers td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 </style>
 </head>
 <body>
+  
 <iframe height="315px" width="100%" src="https://www.youtube.com/embed/6l9USdnEzH4" style="border:none" name="iframe" allowfullscreen></iframe>
+
 <button class="tablink" onclick="openPage('Detail', this, '#566573')" id="defaultOpen">Detail</button>
 <button class="tablink" onclick="openPage('Episode', this, '#566573')">Episode</button>
 <button class="tablink" onclick="openPage('Download', this, '#566573')">Download</button>
-<button class="tablink" onclick="openPage('Komentar', this, '#566573')">Komentar</button>
+
 <div id="Detail" class="tabcontent">
   <br>
   <div style="text-align: center;">
@@ -83,43 +131,121 @@ p {
   <p>Studios: Lerche</p>
   <p>Duration: 23 min/eps</p>
 </div>
+  
 <div id="Episode" class="tabcontent">
 <br>
 <ul id="myUL">
-  <li><a href="https://drive.google.com/file/d/1rZ7A8nm8WHtdcl81OZf-8Ks0GqyeQrIk/preview" target="iframe">Season 2 - Episode 1</a></li>
-  <li><a href="#">Season 2 - Episode 2</a></li>
-  <li><a href="#">Season 2 - Episode 3</a></li>
-  <li><a href="#">Season 2 - Episode 4</a></li>
-  <li><a href="#">Season 2 - Episode 5</a></li>
-  <li><a href="#">Season 2 - Episode 6</a></li>
-  <li><a href="#">Season 2 - Episode 7</a></li>
-  <li><a href="#">Season 2 - Episode 8</a></li>
-  <li><a href="#">Season 2 - Episode 9</a></li>
-  <li><a href="#">Season 2 - Episode 10</a></li>
-  <li><a href="#">Season 2 - Episode 11</a></li>
-  <li><a href="#">Season 2 - Episode 12</a></li>
-  <li><a href="#">Season 2 - Episode 13</a></li>
-  <li><a href="#">Season 2 - Episode 14</a></li>
-  <li><a href="#">Season 2 - Episode 15</a></li>
-  <li><a href="#">Season 2 - Episode 16</a></li>
-  <li><a href="#">Season 2 - Episode 17</a></li>
-  <li><a href="#">Season 2 - Episode 18</a></li>
-  <li><a href="#">Season 2 - Episode 19</a></li>
-  <li><a href="#">Season 2 - Episode 20</a></li>
-  <li><a href="#">Season 2 - Episode 21</a></li>
-  <li><a href="#">Season 2 - Episode 22</a></li>
-  <li><a href="#">Season 2 - Episode 23</a></li>
-  <li><a href="#">Season 2 - Episode 24</a></li>
-  <li><a href="#">Season 2 - Episode 25</a></li>
+  <li><a href="https://drive.google.com/file/d/1rZ7A8nm8WHtdcl81OZf-8Ks0GqyeQrIk/preview" target="iframe">Episode 1</a></li>
+  <li><a href="#">Episode 2</a></li>
+  <li><a href="#">Episode 3</a></li>
+  <li><a href="#">Episode 4</a></li>
+  <li><a href="#">Episode 5</a></li>
+  <li><a href="#">Episode 6</a></li>
+  <li><a href="#">Episode 7</a></li>
+  <li><a href="#">Episode 8</a></li>
+  <li><a href="#">Episode 9</a></li>
+  <li><a href="#">Episode 10</a></li>
+  <li><a href="#">Episode 11</a></li>
+  <li><a href="#">Episode 12</a></li>
+  <li><a href="#">Episode 13</a></li>
+  <li><a href="#">Episode 14</a></li>
+  <li><a href="#">Episode 15</a></li>
+  <li><a href="#">Episode 16</a></li>
+  <li><a href="#">Episode 17</a></li>
+  <li><a href="#">Episode 18</a></li>
+  <li><a href="#">Episode 19</a></li>
+  <li><a href="#">Episode 20</a></li>
+  <li><a href="#">Episode 21</a></li>
+  <li><a href="#">Episode 22</a></li>
+  <li><a href="#">Episode 23</a></li>
+  <li><a href="#">Episode 24</a></li>
+  <li><a href="#">Episode 25</a></li>
 </ul>
 </div>
+  
 <div id="Download" class="tabcontent">
-  <p>Silahkan salin <b>URL</b> dan tempel pada browser Anda</p>
-  <p>Eps1 > URL
+  <button class="accordion">Section 1</button>
+<div class="panel">
+<table id="customers">
+  <tr>
+    <th>Quality</th>
+    <th>Server</th>
+  </tr>
+  <tr>
+    <td>360p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>480p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>720p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>1080p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+</table>
 </div>
-<div id="Komentar" class="tabcontent">
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+<table id="customers">
+  <tr>
+    <th>Quality</th>
+    <th>Server</th>
+  </tr>
+  <tr>
+    <td>360p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>480p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>720p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>1080p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+</table>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+<table id="customers">
+  <tr>
+    <th>Quality</th>
+    <th>Server</th>
+  </tr>
+  <tr>
+    <td>360p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>480p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>720p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+  <tr>
+    <td>1080p</td>
+    <td>IDA | GD | MIRROR</td>
+  </tr>
+</table>
+</div>
+</div>
+  
 <div class="fb-comments" data-href="https://github.com/cakfadillagi" data-width="100%" width="100%" data-numposts="5"></div
 </div>
+  
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -128,6 +254,24 @@ p {
   js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=101523820352758&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
