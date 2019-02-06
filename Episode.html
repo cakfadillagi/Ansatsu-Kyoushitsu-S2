@@ -40,7 +40,7 @@ p {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 16px;
-  width: 33.33%;
+  width: 25%;
 }
 .tablink:hover {
   background-color: #17202A;
@@ -56,6 +56,7 @@ p {
 #Detail {background-color: #17202A;}
 #Episode {background-color: #17202A;}
 #Download {background-color: #17202A;}
+#Komentar {background-color: #17202A;}
   
 </style>
 </head>
@@ -112,6 +113,17 @@ p {
   <p>Silahkan salin <b>URL</b> dan tempel pada browser Anda</p>
   <p>Eps1 > URL
 </div>
+<div id="Komentar" class="tabcontent">
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=101523820352758&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
