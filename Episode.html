@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Font Awesome Icons</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body, html {
@@ -33,11 +31,54 @@ p {
 #myUL li a:hover:not(.header) {
   background-color: #566573;
 }
+  /* Style tab links */
+.tablink {
+  background-color: #17202A;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 16px;
+  width: 33.33%;
+}
+.tablink:hover {
+  background-color: #17202A;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 45px 20px 5px;
+  height: auto;
+  font-size: 14px;
+}
+#Detail {background-color: #17202A;}
+#Episode {background-color: #17202A;}
+  
 </style>
 </head>
 <body>
 <iframe height="315px" width="100%" src="https://www.youtube.com/embed/6l9USdnEzH4" style="border:none" allowfullscreen></iframe>
-<p>Ansatsu Kyoushitsu S2 (2016)</p>
+<button class="tablink" onclick="openPage('Detail', this, '#566573')" id="defaultOpen">Detail</button>
+<button class="tablink" onclick="openPage('Download', this, '#566573')">Episode</button>
+<div id="Detail" class="tabcontent">
+  <h3>Ansatsu Kyoushitsu S2 (Series)</h3>
+  <p>Synopsis: The students return as school is back in session for the second semester. Following their exploits on the island during summer vacation, Class 3-E continues to sharpen their blades with their sights set on their teacher, the slippery Koro-sensei. They have more to worry about than just their teacher, however, as enemy assassins, both old and new, are out for the increased bounty on the octopus' head.
+  <br><br>
+  Moreover, their rivals in Class A, as well as Kunugigaoka Junior High's fearsome principal, stand to block Class E from achieving academic excellence. With all of these obstacles opposing them, the group must continue to work together in order to overcome their foes and accomplish their goal of successfully assassinating their teacher.</p>
+  <p>Genre: Action, Comedy, School,Syounen</p>
+  <p>Tipe: TV</p>
+  <p>Status: Completed</p>
+  <p>Episode: 25</p>
+  <p>Year: 2016</p>
+  <p>Score: 8.64 (260,755 users)</p>
+  <p>Studios: Lerche</p>
+  <p>Duration: 23 min/eps</p>
+</div>
+<div id="Episode" class="tabcontent">
+  <h3>Ansatsu Kyoushitsu S2 (2016)</h3>
 <ul id="myUL">
   <li><a href="#">Season 2 - Episode 1</a></li>
   <li><a href="#">Season 2 - Episode 2</a></li>
@@ -65,5 +106,7 @@ p {
   <li><a href="#">Season 2 - Episode 24</a></li>
   <li><a href="#">Season 2 - Episode 25</a></li>
 </ul>
+</div>
+
 </body>
 </html>
